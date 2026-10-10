@@ -60,7 +60,16 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                         .background(Color.White, RoundedCornerShape(8.dp)),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(text = "UMY")
+                    Text(
+                        text = "UMY",
+                        color = Color(0xFF1565C0),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 22.sp
+                    )
+                }
+                Spacer(modifier = Modifier.width(30.dp))
+                Column(verticalArrangement = Arrangement.Center) {
+                    Text(text = "Teknologi Informasi")
                 }
             }
         }
