@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.material3.Text
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontFamily
 
 @Composable
 fun ActivitasPertama(modifier: Modifier = Modifier) {
@@ -69,7 +70,13 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                 }
                 Spacer(modifier = Modifier.width(30.dp))
                 Column(verticalArrangement = Arrangement.Center) {
-                    Text(text = "Teknologi Informasi")
+                    Text(
+                        text = "Teknologi Informasi",
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
                 }
             }
         }
