@@ -7,22 +7,24 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.background
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.Alignment
+import com.example.questlayout_0253.R
 import androidx.compose.foundation.layout.Column
 import androidx.compose.ui.unit.dp
 import androidx.compose.material3.Text
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.res.painterResource
 
 @Composable
 fun ActivitasPertama(modifier: Modifier = Modifier) {
@@ -55,19 +57,14 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Start
             ) {
-                Box(
+                Image(
+                    painter = painterResource(id = R.drawable.logo_umy),
+                    contentDescription = "Universitas Muhammadiyah Yogyakarta logo",
                     modifier = Modifier
                         .size(100.dp)
-                        .background(Color.White, RoundedCornerShape(8.dp)),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "UMY",
-                        color = Color(0xFF1565C0),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 22.sp
-                    )
-                }
+                        .padding(5.dp),
+                    contentScale = ContentScale.Fit
+                )
                 Spacer(modifier = Modifier.width(30.dp))
                 Column(verticalArrangement = Arrangement.Center) {
                     Text(
